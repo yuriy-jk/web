@@ -22,7 +22,7 @@ urlpatterns = [
     path('', views.test),
     re_path(r'^login/$', views.test),
     re_path(r'^signup/$', views.test),
-    path('question/<str>/', views.test),
+    re_path(r'^question/.*$', views.test),
     re_path(r'^ask/.*$', views.test),
     re_path(r'^popular/$', views.test),
     re_path(r'^new/$', views.test),
