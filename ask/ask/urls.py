@@ -18,12 +18,14 @@ from django.urls import path, re_path
 from qa import views
 
 urlpatterns = [
-    #re_path('admin/', admin.site.urls),
-    path('', views.test),
+    path('admin/', admin.site.urls),
+    path('', views.new, name='new'),
+    path('questions/', views.questions, name='questions'),
     re_path(r'^login/$', views.test),
     re_path(r'^signup/$', views.test),
-    re_path(r'^question/.*$', views.test),
+    path('question/<int:id>/', views.question, name='question'),
     re_path(r'^ask/.*$', views.test),
-    re_path(r'^popular/$', views.test),
-    re_path(r'^new/$', views.test),
+    re_path(r'^popular/.*$', views.popular, name='popular'),
+    re_path(r'^new/.*$', views.test),
     ]
+    

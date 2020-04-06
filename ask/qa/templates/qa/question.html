@@ -1,0 +1,14 @@
+{% extends 'qa/base.html' %}
+{% block content %}
+	<question>
+    <h1>{{question.title}}</h1>
+    <p>{{question.text}}</p>
+    <question>
+    <ul>
+        {% for answer in answers %}
+            <li>{{ answer.text }}</li>
+        {% empty %}
+            <li>Вопроосы ещё не добавлены</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
