@@ -28,4 +28,3 @@ urlpatterns = [
     re_path(r'^popular/.*$', views.popular, name='popular'),
     re_path(r'^new/.*$', views.test),
     ]
-    
