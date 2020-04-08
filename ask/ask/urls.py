@@ -24,7 +24,7 @@ urlpatterns = [
     re_path(r'^login/$', views.test),
     re_path(r'^signup/$', views.test),
     path('question/<int:id>/', views.question, name='question'),
-    re_path(r'^ask/.*$', views.test),
+    re_path(r'^ask/.*$', views.ask, name='ask'),
     re_path(r'^popular/.*$', views.popular, name='popular'),
     re_path(r'^new/.*$', views.test),
     ]
