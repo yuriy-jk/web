@@ -2,11 +2,12 @@
 {% block content %}
 	<question>
     <h1>{{question.title}}</h1>
+    <h2>{{question.author}}</h2>
     <p>{{question.text}}</p>
     <question>
     <ul>
         {% for answer in answers %}
-            <li>{{ answer.text }}</li>
+            <li>{{ answer.text }} - {{answer.author}}</li>
         {% empty %}
             <li>Ответы ещё не добавлены</li>
         {% endfor %}
