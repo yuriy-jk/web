@@ -1,4 +1,14 @@
 {% block head %}
+    <p>
+  <a href="{% url 'new' %}">New</a> -
+  <a href="{% url 'questions' %}">Questions</a> -
+  {% if user.is_authenticated %}
+    Hello, {{ user.username }}.
+      <a href="{% url 'log_out' %}">log out</a>
+  {% else %}
+    <a href="{% url 'log_in' %}">log in</a>
+  {% endif %}
+</p>
 {% endblock %}
 {% block content %}
     {% block page %}
