@@ -40,7 +40,7 @@ def signup(request):
 		if form.is_valid():
 			form.save()
 		username = form.cleaned_data.get('username')
-		my_password = form.cleaned_data.get('password1')
+		my_password = form.cleaned_data.get('password')
 		user = authenticate(username=username, password=my_password)
 		login(request, user)
 		return HttpResponseRedirect(reverse('new'))
